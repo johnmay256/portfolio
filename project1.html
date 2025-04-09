@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1 - John's Prop Builds</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Project 1: Amazing Prop</h1>
+    <div class="project-gallery">
+      <!-- Image 1 -->
+      <a href="#img1" class="lightbox-link">
+        <img src="images/prop1.jpg" alt="Project 1 - Image 1" />
+      </a>
+
+      <!-- Image 2 -->
+      <a href="#img2" class="lightbox-link">
+        <img src="images/prop2.jpg" alt="Project 1 - Image 2" />
+      </a>
+
+      <!-- Add more images as needed -->
+    </div>
+
+    <!-- Lightbox 1 -->
+    <div id="img1" class="lightbox">
+      <a href="project1.html" class="close">&times;</a>
+      <img src="images/prop1.jpg" alt="Project 1 - Image 1" />
+      <!-- Navigation arrows -->
+      <a href="#img2" class="nav-arrow next">&rarr;</a>
+      <a href="#img2" class="nav-arrow prev">&larr;</a>
+    </div>
+
+    <!-- Lightbox 2 -->
+    <div id="img2" class="lightbox">
+      <a href="project1.html" class="close">&times;</a>
+      <img src="images/prop2.jpg" alt="Project 1 - Image 2" />
+      <!-- Navigation arrows -->
+      <a href="#img1" class="nav-arrow prev">&larr;</a>
+      <a href="#img3" class="nav-arrow next">&rarr;</a>
+    </div>
+
+    <!-- Lightbox 3 (if needed) -->
+    <div id="img3" class="lightbox">
+      <a href="project1.html" class="close">&times;</a>
+      <img src="images/prop3.jpg" alt="Project 1 - Image 3" />
+      <!-- Navigation arrows -->
+      <a href="#img2" class="nav-arrow prev">&larr;</a>
+      <a href="#img1" class="nav-arrow next">&rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 John’s Prop Builds</p>
+  </footer>
+
+  <script>
+    document.addEventListener('keydown', function (e) {
+      const openLightbox = document.querySelector('.lightbox:target');
+      if (!openLightbox) return;
+
+      if (e.key === 'Escape') {
+        window.location.hash = '';
+      }
+
+      const ids = ['img1', 'img2', 'img3'];
+      const currentIndex = ids.findIndex(id => '#' + id === window.location.hash);
+
+      if (e.key === 'ArrowRight') {
+        const next = ids[(currentIndex + 1) % ids.length];
+        window.location.hash = '#' + next;
+      }
+
+      if (e.key === 'ArrowLeft') {
+        const prev = ids[(currentIndex - 1 + ids.length) % ids.length];
+        window.location.hash = '#' + prev;
+      }
+    });
+  </script>
+<script src="js/hammer.min.js"></script>
+<script src="js/lightbox-swipe.js"></script>
+</body>
+</html>

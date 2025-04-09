@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - John's Prop Builds</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <h1>Contact Me</h1>
+<form action="https://formsubmit.co/john@romfx.com" method="POST" class="contact-form">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="box">
+
+  <label for="name">Name</label>
+  <input type="text" name="name" id="name" required>
+
+  <label for="email">Email</label>
+  <!-- Email field should have name="email" -->
+  <input type="email" name="email" id="email" required>
+
+  <label for="message">Message</label>
+  <textarea name="message" id="message" rows="6" required></textarea>
+
+  <!-- Add hidden _replyto field to ensure it's treated as the reply-to address -->
+  <input type="hidden" name="_replyto" value="" id="hidden-replyto">
+
+  <button type="submit">Send Message</button>
+</form>
+
+    <p class="instagram-link">Or reach out via <a href="https://instagram.com/johnmay256" target="_blank">Instagram</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 John’s Prop Builds</p>
+  </footer>
+<script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    const email = document.querySelector('#email').value;
+    document.querySelector('#hidden-replyto').value = email;
+  });
+</script>
+</body>
+</html>

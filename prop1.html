@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prop 1 Details</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Lightbox2 CSS from CDN -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Prop 1 Project</h1>
+    <div class="project-gallery">
+      <div class="gallery-item">
+        <a href="images/prop1.jpg" data-lightbox="prop1">
+          <img src="images/prop1.jpg" alt="Prop 1 - Image 1" />
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="images/prop2.jpg" data-lightbox="prop1">
+          <img src="images/prop2.jpg" alt="Prop 1 - Image 2" />
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="images/prop3.jpg" data-lightbox="prop1">
+          <img src="images/prop3.jpg" alt="Prop 1 - Image 3" />
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 John’s Prop Builds</p>
+  </footer>
+
+  <!-- Lightbox2 JS from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+python -m http.server 8000
+
+python generate_project_page.py 2
+
+python generate_project_page_and_update_portfolio.py 3
+
