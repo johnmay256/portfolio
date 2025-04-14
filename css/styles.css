@@ -281,9 +281,12 @@ footer {
   }
 
   .page-content img {
-    width: 80%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
+    flex-shrink: 0;
+    border-radius: 8px;
+    object-fit: contain;
   }
 }
 .page-content {
@@ -293,14 +296,11 @@ footer {
   padding: 2rem 1rem;
 }
 
-.page-content img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  flex-shrink: 0;
-  border-radius: 8px;
-}
-
 .page-content .text {
   flex: 1;
 }
+  .page-content img {
+    width: 80%;  /* Make image smaller on mobile */
+    max-width: 400px; /* Limit max size on mobile screens */
+    object-fit: contain; /* Keep aspect ratio intact on mobile */
+  }
