@@ -18,7 +18,7 @@ html {
 }
 
 header {
-  background: #225;
+  background: #222;
   color: #fff;
   padding: 1rem 0;
   position: sticky;
@@ -281,7 +281,7 @@ footer {
   }
 
   .page-content img {
-    width: 100%;
+    width: 80%;
     max-width: 400px;
     height: auto;
   }
@@ -294,10 +294,10 @@ footer {
 }
 
 .page-content img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
   height: auto;
   flex-shrink: 0;
-  width: 300px;
   border-radius: 8px;
 }
 
