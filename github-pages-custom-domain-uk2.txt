@@ -1,0 +1,37 @@
+
+How to Set Up a Custom Domain with UK2.net for GitHub Pages
+------------------------------------------------------------
+
+1. Log in to your UK2.net Control Panel:
+   https://www.uk2.net/Control-Panel/
+
+2. Go to "Domains" and select your domain.
+
+3. Click "Manage DNS" or "DNS Records".
+
+4. Add the following A Records to point your root domain (e.g., johnprops.com) to GitHub:
+
+   Type | Hostname | Address
+   -----|----------|------------------
+   A    | @        | 185.199.108.153
+   A    | @        | 185.199.109.153
+   A    | @        | 185.199.110.153
+   A    | @        | 185.199.111.153
+
+5. Add a CNAME Record for the 'www' version of your domain:
+
+   Type  | Hostname | Value
+   ------|----------|------------------------------
+   CNAME | www      | yourusername.github.io
+
+   (Replace "yourusername" with your actual GitHub username.)
+
+6. On GitHub:
+   - Go to your repository → Settings → Pages
+   - Under "Custom domain", enter: www.yourdomain.com or yourdomain.com
+   - Click "Save"
+   - Enable "Enforce HTTPS" after the site resolves to your domain
+
+7. Wait for DNS propagation (can take a few minutes up to 24 hours).
+
+Your GitHub Pages site will then be accessible via your custom domain.

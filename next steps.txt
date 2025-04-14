@@ -1,0 +1,26 @@
+Next possible steps:
+
+1. Add more project pages
+– Copy the project1.html template and update images/content per project.
+
+2. Optional features / polish
+
+Add a favicon
+
+Smooth scroll for nav links
+
+Scroll-to-top button
+
+Add page transition effects
+
+Minor animations (e.g., fade-in on scroll)
+
+SEO tags (titles, descriptions)
+
+Social sharing metadata (Open Graph / Twitter cards)
+
+3. Content management options (for the future)
+– Set up Netlify CMS or a simple data-driven setup if you want to update projects easily without touching HTML.
+
+4. Domain setup
+– When you’re ready, configure your custom domain via UK2.net.
